@@ -1,0 +1,76 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "__DEV__": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "eslint-plugin-import-helpers",
+        "filenames",
+        "sonarjs",
+        "import"
+    ],
+    "rules": {
+      "semi": ["error", "never"],
+      "no-console": ["error", { "allow": ["warn", "error", "tron"] }],
+        "comma-dangle": [
+            "error",
+            {
+              "arrays": "always-multiline",
+              "objects": "always-multiline",
+              "imports": "always-multiline",
+              "exports": "always-multiline",
+              "functions": "ignore"
+            }
+          ],
+          "no-useless-catch":"off",
+          "object-curly-newline":"off",
+          "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+          "no-param-reassign":"off",
+          "react/jsx-props-no-spreading":"off",
+          "react/prop-types":"off",
+          "sonarjs/cognitive-complexity": ["warn", 30],
+          "sonarjs/no-useless-catch":"off",
+          "import/prefer-default-export": "off",
+          "max-classes-per-file": ["off"],
+          "arrow-parens": ["warn", "as-needed"],
+          "implicit-arrow-linebreak":"off",
+          "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+          "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+                    "/^~/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ]
+    }
+}
