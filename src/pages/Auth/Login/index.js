@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Input from '../../../components/Input'
-import { Container, Form, SubmitButton, SignLink, SignLinkText } from '../styled'
+import { Form, Container, SubmitButton, SignLink, SignLinkText } from '../styled'
 
 const Login = ({ navigation }) => (
   <Container>
@@ -25,5 +25,6 @@ const Login = ({ navigation }) => (
     </SignLink>
   </Container>
 )
+Login.navigationOptions = { headerShown: false }
 
 export default Login

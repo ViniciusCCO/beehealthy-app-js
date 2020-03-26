@@ -8,15 +8,8 @@ import Main from './pages/Main'
 
 const authRoutes = () =>
   createStackNavigator({
-    Login: { screen: Login, navigationOptions: { headerShown: false } },
-    SignIn: {
-      screen: SignIn,
-      navigationOptions: {
-        headerTitle: 'Sign In',
-        headerTitleAlign: 'center',
-        headerTintColor: 'black',
-      },
-    },
+    Login,
+    SignIn,
   })
 
 const appRoutes = () =>
