@@ -15,7 +15,7 @@ import { persistor, store } from './store'
 
 const RouteConfig = () => {
   const token = useSelector(state => state.auth.token)
-  const Routes = createRouter(token)
+  const Routes = createRouter(true)
 
   return <Routes />
 }

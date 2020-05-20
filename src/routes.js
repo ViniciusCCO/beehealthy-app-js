@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs'
 import Login from './pages/Auth/Login'
 import SignIn from './pages/Auth/SignIn'
 import Main from './pages/Main'
+import SearchNutritionist from './pages/Patient/SearchNutritionist'
 
 const authRoutes = () =>
   createStackNavigator({
@@ -20,9 +21,13 @@ const authRoutes = () =>
   })
 
 const appRoutes = () =>
-  createBottomTabNavigator({
-    Main,
-  })
+  createBottomTabNavigator(
+    {
+      Main,
+      SearchNutritionist,
+    },
+    { initialRouteName: 'SearchNutritionist' }
+  )
 
 export default token =>
   createAppContainer(
