@@ -2,7 +2,7 @@ import React from 'react'
 import SearchBar from '../../../components/SearchBar'
 import NutritionistCard from '../../../components/NutritionistCard'
 import { FlatList } from 'react-native'
-import { Container } from './styled'
+import { Container, List } from './styled'
 
 const data = [
   {
@@ -13,70 +13,84 @@ const data = [
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 2,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 3,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 4,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 5,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 6,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 7,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 8,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 9,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 10,
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
     address: 'Rua do Nome aqui, numero não interessa',
   },
   {
-    id: 11,
+    id: 1,
+    name: 'Nome aqui',
+    photo:
+      'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
+    address: 'Rua do Nome aqui, numero não interessa',
+  },
+  {
+    id: 1,
+    name: 'Nome aqui',
+    photo:
+      'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',
+    address: 'Rua do Nome aqui, numero não interessa',
+  },
+  {
+    id: 1,
     name: 'Nome aqui',
     photo:
       'https://osegredo.com.br/wp-content/uploads/2018/02/as-pessoas-de-cora%C3%A7%C3%B5es-de-ouro-830x450.jpg',

@@ -21,7 +21,7 @@ const authRoutes = () =>
   })
 
 const appRoutes = () =>
-  createBottomTabNavigator(
+  createSwitchNavigator(
     {
       Main,
       SearchNutritionist,

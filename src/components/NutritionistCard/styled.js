@@ -1,11 +1,7 @@
 import styled from 'styled-components/native'
 
 export const Card = styled.View`
-  flex: 1;
-  border-radius: 10px;
   margin: 10px;
-  height: 90px;
-  margin-top: 20px;
   border-bottom-width: 3px;
   border-right-width: 2px;
   border-color: #ebe8ed;
