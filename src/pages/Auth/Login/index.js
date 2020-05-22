@@ -13,7 +13,7 @@ const Login = ({ navigation }) => (
         placeholder="Email"
       />
       <Input autoCorrect={false} secureTextEntry placeholder="senha" />
-      <SubmitButton onPress={() => {}}>Acessar</SubmitButton>
+      <SubmitButton onPress={() => {navigation.navigate('SearchNutritionist')}}>Acessar</SubmitButton>
     </Form>
 
     <SignLink

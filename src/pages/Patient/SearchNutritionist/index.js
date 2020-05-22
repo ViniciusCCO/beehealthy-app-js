@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchBar from '../../../components/SearchBar'
 import NutritionistCard from '../../../components/NutritionistCard'
-import { FlatList } from 'react-native'
+import { FlatList,TouchableOpacity } from 'react-native'
 import { Container, List } from './styled'
 
 const data = [
@@ -97,7 +97,7 @@ const data = [
     address: 'Rua do Nome aqui, numero não interessa',
   },
 ]
-const SearchNutritionist = () => {
+const SearchNutritionist = ({navigation}) => {
   return (
     <Container>
       <SearchBar />
@@ -105,7 +105,10 @@ const SearchNutritionist = () => {
         keyExtractor={item => item.id}
         data={data}
         renderItem={({ item }) => {
-          return <NutritionistCard name={item.name} photo={item.photo} address={item.address} />
+          return (
+          <TouchableOpacity onPress={() => {navigation.navigate('MakeAnAppointment',{nome:item.name})}}>
+            <NutritionistCard name={item.name} photo={item.photo} address={item.address} />
+          </TouchableOpacity>)
         }}
         onEndReached={() => console.log('chegou no fim')}
       />

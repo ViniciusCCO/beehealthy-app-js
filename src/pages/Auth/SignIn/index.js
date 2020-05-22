@@ -8,6 +8,21 @@ import { signinTrigger } from '../../../store/actions/auth-actions'
 import RadioButton from '../../../components/RadioButton'
 import types from './types'
 
+const T= () =>{
+    var toRemove='Paciente'
+    var index = types.indexOf(toRemove)
+    if(index > -1){
+       var a= types.splice(index,1)
+    }
+    return a 
+}
+
+remove_post_on_list = (deletePostId) => {
+  this.setState({
+    postList: this.state.postList.filter(item => item.post_id != deletePostId)
+  })
+}
+
 const SignIn = () => {
   const dispatch = useDispatch()
 
@@ -60,7 +75,7 @@ const SignIn = () => {
         <Text> Você está se cadastrando no BeeHealthy para ser?</Text>
         <Row>
           <FlatList
-            data={types}
+            data={T()}
             renderItem={({ item }) => {
               return (
                 <RadioButton

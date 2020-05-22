@@ -6,6 +6,7 @@ import Login from './pages/Auth/Login'
 import SignIn from './pages/Auth/SignIn'
 import Main from './pages/Main'
 import SearchNutritionist from './pages/Patient/SearchNutritionist'
+import MakeAnAppointment from './pages/Patient/MakeAnAppointment'
 
 const authRoutes = () =>
   createStackNavigator(
@@ -21,7 +22,7 @@ const authRoutes = () =>
       },
     },
     {
-      initialRouteName: 'SignIn',
+      initialRouteName: 'Login',
     }
   )
 
@@ -30,6 +31,7 @@ const appRoutes = () =>
     {
       Main,
       SearchNutritionist,
+      MakeAnAppointment,
     },
     { initialRouteName: 'SearchNutritionist' }
   )
