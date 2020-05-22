@@ -3,9 +3,9 @@ import logger from 'redux-logger'
 import { persistStore } from 'redux-persist'
 import createSagaMiddleware from 'redux-saga'
 
-import reducers from '../reducers'
-import persistReducers from '../reducers/persistReducer'
-import sagas from '../sagas'
+import reducers from './reducers'
+import persistReducers from './reducers/persistReducer'
+import sagas from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
