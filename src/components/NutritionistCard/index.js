@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, ButtonGroup } from 'react-native'
 import { ImageFace } from './styled'
 import { Card, Row, MainText, Column } from './styled'
 
@@ -14,7 +14,9 @@ const NutritionistCard = ({ name, address, photo }) => {
         </Column>
       </Row>
       <Row />
+      
     </Card>
+    
   )
 }
 

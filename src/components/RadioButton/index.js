@@ -7,7 +7,6 @@ const RadioButton = ({ selected, name, onPress }) => {
   return (
     <Column>
       <Row>
-        <Text>{name}</Text>
         <RB
           isSelected={selected}
           innerColor={'grey'}
@@ -15,6 +14,7 @@ const RadioButton = ({ selected, name, onPress }) => {
           size={13}
           onPress={onPress}
         />
+        <Text>{name}</Text>
       </Row>
     </Column>
   )

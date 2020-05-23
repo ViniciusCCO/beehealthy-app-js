@@ -8,14 +8,7 @@ import { signinTrigger } from '../../../store/actions/auth-actions'
 import RadioButton from '../../../components/RadioButton'
 import types from './types'
 
-const T= () =>{
-    var toRemove='Paciente'
-    var index = types.indexOf(toRemove)
-    if(index > -1){
-       var a= types.splice(index,1)
-    }
-    return a 
-}
+
 
 remove_post_on_list = (deletePostId) => {
   this.setState({
@@ -75,7 +68,7 @@ const SignIn = () => {
         <Text> Você está se cadastrando no BeeHealthy para ser?</Text>
         <Row>
           <FlatList
-            data={T()}
+            data={types}
             renderItem={({ item }) => {
               return (
                 <RadioButton
