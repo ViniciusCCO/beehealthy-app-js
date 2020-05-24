@@ -13,8 +13,7 @@ function* login({ payload: { email, password } }) {
 
 function* signin({ payload: { name, email, password, type } }) {
   try {
-    console.log('chegou aqui', { name, email, password, type })
-    //yield call(api.signin, { name, email, password, type })
+    yield call(api.signin, { name, email, password, type })
   } catch (error) {
     console.error(error)
   }

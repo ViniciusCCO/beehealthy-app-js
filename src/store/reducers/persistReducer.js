@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'beehealthy',
       storage: AsyncStorage,
-      whitelist: ['auth'],
+      whitelist: [],
     },
     reducers
   )

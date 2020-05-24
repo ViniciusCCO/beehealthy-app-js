@@ -28,7 +28,6 @@ const SignIn = () => {
   }
 
   const handleSubmit = () => {
-    console.log('chegou no handle submit')
     dispatch(signinTrigger({ payload: { name, email, password, type: selected.type } }))
   }
 
@@ -64,7 +63,7 @@ const SignIn = () => {
             renderItem={({ item }) => {
               return (
                 <RadioButton
-                  name={item.type}
+                  name={item.label}
                   selected={item.selected}
                   onPress={() => handleSelect(item.id)}
                 />

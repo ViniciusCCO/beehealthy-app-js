@@ -1,12 +1,14 @@
 export default [
   {
     id: 1,
-    type: 'Paciente',
+    label: 'Paciente',
     selected: false,
+    type: 'patient',
   },
   {
     id: 2,
-    type: 'Nutricionista',
+    label: 'Nutricionista',
     selected: false,
+    type: 'nutritionist',
   },
 ]

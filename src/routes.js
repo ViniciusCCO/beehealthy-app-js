@@ -21,7 +21,7 @@ const authRoutes = () =>
       },
     },
     {
-      initialRouteName: 'SignIn',
+      initialRouteName: 'Login',
     }
   )
 

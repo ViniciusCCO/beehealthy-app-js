@@ -2,10 +2,10 @@ import { createReducer } from 'reduxsauce'
 import { actions } from '../actions/auth-actions'
 
 const INITIAL_STATE = {
-  email: '',
-  password: '',
-  type: '',
-  role: '',
+  email: null,
+  password: null,
+  type: null,
+  role: null,
   token: null,
 }
 
