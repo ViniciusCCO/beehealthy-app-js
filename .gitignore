@@ -4,6 +4,7 @@
 
 # Xcode
 #
+yarn.lock
 build/
 *.pbxuser
 !default.pbxuser
