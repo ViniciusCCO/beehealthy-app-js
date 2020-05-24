@@ -2,9 +2,11 @@ import { all, call, put, takeLatest } from 'redux-saga/effects'
 import { actions } from '../actions/auth-actions'
 import * as api from '../../services/api'
 
-function* login({ payload: { email, password } }) {
+function* login({ payload: { email, password, type } }) {
   try {
-    const { token } = yield call(api.login, { email, password })
+    const {
+      data: { token },
+    } = yield call(api.login, { email, password, type })
     yield put({ type: actions.LOGINSUCCESS, payload: { token } })
   } catch (error) {
     console.error(error)
