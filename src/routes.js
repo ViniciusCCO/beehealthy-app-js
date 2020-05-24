@@ -8,17 +8,22 @@ import Main from './pages/Main'
 import SearchNutritionist from './pages/Patient/SearchNutritionist'
 
 const authRoutes = () =>
-  createStackNavigator({
-    Login: { screen: Login, navigationOptions: { headerShown: false } },
-    SignIn: {
-      screen: SignIn,
-      navigationOptions: {
-        headerTitle: 'Sign In',
-        headerTitleAlign: 'center',
-        headerTintColor: 'black',
+  createStackNavigator(
+    {
+      Login: { screen: Login, navigationOptions: { headerShown: false } },
+      SignIn: {
+        screen: SignIn,
+        navigationOptions: {
+          headerTitle: 'Sign In',
+          headerTitleAlign: 'center',
+          headerTintColor: 'black',
+        },
       },
     },
-  })
+    {
+      initialRouteName: 'Login',
+    }
+  )
 
 const appRoutes = () =>
   createSwitchNavigator(
