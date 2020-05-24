@@ -27,3 +27,8 @@ export const SignLinkText = styled.Text`
   font-weight: bold;
   font-size: 16px;
 `
+export const Row = styled.View`
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`

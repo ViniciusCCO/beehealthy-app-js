@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { FlatList, Text, TextInput } from 'react-native'
+import { FlatList, Text } from 'react-native'
 import Input from '../../../components/Input'
 import { Container, Form, SubmitButton, SignLink, SignLinkText } from '../styled'
-import { Row } from './styled'
+import { Row } from '../styled'
 import { signinTrigger } from '../../../store/actions/auth-actions'
 import RadioButton from '../../../components/RadioButton'
-import types from './types'
+import types from '../types'
 
 const SignIn = () => {
   const dispatch = useDispatch()
@@ -15,6 +15,10 @@ const SignIn = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const handleSubmit = () => {
+    dispatch(signinTrigger({ payload: { name, email, password, type: selected.type } }))
+  }
 
   const handleSelect = id => {
     types.forEach(i => (i.selected = false))
@@ -25,10 +29,6 @@ const SignIn = () => {
         setSelected(item)
       }
     })
-  }
-
-  const handleSubmit = () => {
-    dispatch(signinTrigger({ payload: { name, email, password, type: selected.type } }))
   }
 
   return (

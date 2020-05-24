@@ -1,16 +1,31 @@
 import React, { useState } from 'react'
+import { FlatList } from 'react-native'
+import RadioButton from '../../../components/RadioButton'
 import { useDispatch } from 'react-redux'
 import Input from '../../../components/Input'
-import { Container, Form, SubmitButton, SignLink, SignLinkText } from '../styled'
+import { Container, Form, SubmitButton, SignLink, SignLinkText, Row } from '../styled'
 import { loginTrigger } from '../../../store/actions/auth-actions'
+import types from '../types'
 
 const Login = ({ navigation }) => {
   const dispatch = useDispatch()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
+  const [selected, setSelected] = useState([])
 
   const handleSubmit = () => {
-    dispatch(loginTrigger({ payload: { email, password } }))
+    dispatch(loginTrigger({ payload: { email, password, type: selected.type } }))
+  }
+
+  const handleSelect = id => {
+    types.forEach(i => (i.selected = false))
+
+    types.forEach(item => {
+      if (item.id === id) {
+        item.selected = !item.selected
+        setSelected(item)
+      }
+    })
   }
 
   return (
@@ -31,6 +46,22 @@ const Login = ({ navigation }) => {
           secureTextEntry
           placeholder="senha"
         />
+
+        <Row>
+          <FlatList
+            data={types}
+            renderItem={({ item }) => {
+              return (
+                <RadioButton
+                  name={item.label}
+                  selected={item.selected}
+                  onPress={() => handleSelect(item.id)}
+                />
+              )
+            }}
+            keyExtractor={item => item.id}
+          />
+        </Row>
         <SubmitButton onPress={handleSubmit}>Acessar</SubmitButton>
       </Form>
 

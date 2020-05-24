@@ -5,8 +5,8 @@ const api = axios.create({
   timeout: 29000,
 })
 
-export const login = async ({ email, password }) => {
-  return api.post('/account/login', { email, password })
+export const login = async ({ email, password, type }) => {
+  return api.post('/account/login', { email, password, type })
 }
 
 export const signin = async ({ name, email, password, type }) => {
